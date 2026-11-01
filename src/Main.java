@@ -3,8 +3,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner txt = new Scanner(System.in);
         System.out.println("Input: ");
-        String text = txt.nextLine().trim();
-        if (text.isEmpty()) {
+        String text = txt.nextLine();
+        if (text.trim().isEmpty()) {
             System.out.println("Ошибка: строка пустая");
         }
         reverse(text);
