@@ -2,6 +2,11 @@
 public class Main {
     public static void main(String[] args) {
         String text = "0xr@na the !owtab1a%$#@!34";
+        if (text.isEmpty()) {
+            System.out.println("Ошибка: строка пустая");
+        } else if (text.isBlank()) {
+            System.out.println("Ошибка: строка сотоит только из пробелов");
+        }
         char[] chars = text.toCharArray();
         int left = 0;
         int right = chars.length - 1;
@@ -22,6 +27,5 @@ public class Main {
             }
         }
         System.out.println(new String(chars));
-
     }
 }
