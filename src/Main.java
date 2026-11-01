@@ -1,12 +1,17 @@
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        String text = "0xr@na the !owtab1a%$#@!34";
+        Scanner txt = new Scanner(System.in);
+        System.out.println("Input: ");
+        String text = txt.nextLine().trim();
         if (text.isEmpty()) {
             System.out.println("Ошибка: строка пустая");
-        } else if (text.isBlank()) {
-            System.out.println("Ошибка: строка сотоит только из пробелов");
         }
+        reverse(text);
+        String out = reverse(text);
+        System.out.println("Output: " + out);
+    }
+    public static String reverse(String text) {
         char[] chars = text.toCharArray();
         int left = 0;
         int right = chars.length - 1;
@@ -26,6 +31,7 @@ public class Main {
                 right--;
             }
         }
-        System.out.println(new String(chars));
+        String result = new String(chars);
+        return result;
     }
 }
