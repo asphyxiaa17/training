@@ -6,8 +6,8 @@ public class Main {
         String text = txt.nextLine();
         if (text.trim().isEmpty()) {
             System.out.println("Ошибка: строка пустая");
+            return;
         }
-        reverse(text);
         String out = reverse(text);
         System.out.println("Output: " + out);
     }
@@ -31,7 +31,6 @@ public class Main {
                 right--;
             }
         }
-        String result = new String(chars);
-        return result;
+        return new String(chars);
     }
 }
