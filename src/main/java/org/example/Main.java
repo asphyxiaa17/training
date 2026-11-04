@@ -14,6 +14,9 @@ public class Main {
         System.out.println("Output: " + out);
     }
     public static String reverse(String text) {
+        if (text == null){
+            return "";
+        }
         char[] chars = text.toCharArray();
         int left = 0;
         int right = chars.length - 1;
